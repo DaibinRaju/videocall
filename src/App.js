@@ -3,7 +3,7 @@ import './App.css';
 import React, { useEffect, useState,useRef } from 'react';
 import ReactDOM from 'react-dom';
 
-const w= new WebSocket("wss://signalaara.herokuapp.com/ws");
+const w= new WebSocket("ws://127.0.0.1:8000/ws");
 
 function App() {
 
@@ -175,7 +175,7 @@ function App() {
   return (
     <div className="App">
       <h1>AARA Chat</h1>
-      <video className='local' ref={lVideo}></video>
+      <video className='local' ref={lVideo} muted></video>
       <video className='remote' ref={rVideo}></video>
     </div>
   );
